@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --border-sub: #21262d;
+            --text: #c9d1d9;
+            --text-dim: #8b949e;
+            --text-fade: #484f58;
+            --blue: #58a6ff;
+            --green: #3fb950;
+            --yellow: #e3b341;
+            --red: #f85149;
+            --purple: #a371f7;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+        }
+
+        /* ── Page header ── */
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-header h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .badge {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            background: rgba(88, 166, 255, 0.12);
+            color: var(--blue);
+            border: 1px solid rgba(88, 166, 255, 0.3);
+            border-radius: 999px;
+            padding: 0.2rem 0.7rem;
+        }
+
+        .back-link {
+            font-size: 0.85rem;
+            color: var(--blue);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            transition: opacity .2s;
+        }
+
+        .back-link:hover {
+            opacity: 0.7;
+        }
+
+        /* ── Toolbar (search + add) ── */
+        .toolbar {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .search-wrap {
+            position: relative;
+            flex: 1;
+            min-width: 240px;
+            max-width: 520px;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            color: var(--text-dim);
+            pointer-events: none;
+            transition: color .2s;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 0.55rem 0.75rem 0.55rem 2.4rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            outline: none;
+            transition: border-color .2s, box-shadow .2s, width .3s;
+        }
+
+        #searchInput::placeholder {
+            color: var(--text-fade);
+        }
+
+        #searchInput:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+        }
+
+        #searchInput:focus+.search-icon,
+        .search-wrap:focus-within .search-icon {
+            color: var(--blue);
+        }
+
+        #clearSearch {
+            position: absolute;
+            right: 0.6rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-dim);
+            font-size: 1rem;
+            display: none;
+            line-height: 1;
+            padding: 2px;
+        }
+
+        #clearSearch:hover {
+            color: var(--text);
+        }
+
+        #noResults {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .btn-add {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.55rem 1.1rem;
+            background: linear-gradient(135deg, rgba(63, 185, 80, 0.2), rgba(63, 185, 80, 0.1));
+            color: var(--green);
+            border: 1px solid rgba(63, 185, 80, 0.35);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background .2s, transform .15s, box-shadow .2s;
+            white-space: nowrap;
+        }
+
+        .btn-add:hover {
+            background: rgba(63, 185, 80, 0.25);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(63, 185, 80, 0.2);
+        }
+
+        /* ── Table wrapper ── */
+        .table-wrapper {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+            min-width: 960px;
+        }
+
+        thead {
+            background: linear-gradient(90deg, #1c2128 0%, #21262d 100%);
+            border-bottom: 2px solid var(--border);
+        }
+
+        thead th {
+            padding: 0.85rem 0.9rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            white-space: nowrap;
+        }
+
+        thead th:last-child {
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-sub);
+            transition: background .15s;
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: rgba(88, 166, 255, 0.04);
+        }
+
+        tbody tr.hidden-row {
+            display: none;
+        }
+
+        td {
+            padding: 0.75rem 0.9rem;
+            vertical-align: top;
+            color: var(--text);
+        }
+
+        /* ── MAC ── */
+        .mac-cell {
+            font-family: 'Courier New', monospace;
+            font-size: 0.75rem;
+            color: #79c0ff;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        /* ── Name ── */
+        .name-cell {
+            font-weight: 600;
+            color: #f0f6fc;
+            white-space: nowrap;
+        }
+
+        /* ── Chip lists ── */
+        .chip-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+        }
+
+        .chip {
+            border-radius: 4px;
+            padding: 0.1rem 0.45rem;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+
+        .chip-proto {
+            background: rgba(163, 113, 247, 0.15);
+            color: var(--purple);
+            border: 1px solid rgba(163, 113, 247, 0.25);
+        }
+
+        .chip-policy {
+            background: rgba(88, 166, 255, 0.12);
+            color: var(--blue);
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+
+        .chip-port {
+            background: rgba(227, 179, 65, 0.12);
+            color: var(--yellow);
+            border: 1px solid rgba(227, 179, 65, 0.2);
+        }
+
+        /* ── Status badge ── */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.2rem 0.65rem;
+            border-radius: 999px;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            white-space: nowrap;
+        }
+
+        .status-badge.online {
+            background: rgba(63, 185, 80, 0.13);
+            color: var(--green);
+            border: 1px solid rgba(63, 185, 80, 0.3);
+        }
+
+        .status-badge.offline {
+            background: rgba(248, 81, 73, 0.13);
+            color: var(--red);
+            border: 1px solid rgba(248, 81, 73, 0.3);
+        }
+
+        .status-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: currentColor;
+            animation: pulse 2s infinite;
+        }
+
+        .status-badge.offline::before {
+            animation: none;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.35;
+            }
+        }
+
+        /* ── VLAN block ── */
+        .vlan-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .vlan-block {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-sub);
+            border-radius: 6px;
+            padding: 0.5rem 0.65rem;
+            min-width: 260px;
+        }
+
+        .vlan-id {
+            font-family: 'Courier New', monospace;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--yellow);
+            margin-bottom: 0.35rem;
+            letter-spacing: 0.04em;
+        }
+
+        .vlan-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 0.35rem 0.8rem;
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            margin-bottom: 0.3rem;
+        }
+
+        .vlan-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .vlan-label {
+            color: var(--text-fade);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .vlan-ip {
+            font-family: 'Courier New', monospace;
+            color: #79c0ff;
+            font-size: 0.72rem;
+        }
+
+        .bool-yes {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        .bool-no {
+            color: var(--red);
+            font-weight: 600;
+        }
+
+        /* ── Action buttons ── */
+        .actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.45rem;
+        }
+
+        .btn-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: transparent;
+            font-size: 0.95rem;
+            transition: background .2s, transform .15s;
+        }
+
+        .btn-icon:hover {
+            transform: scale(1.18);
+        }
+
+        .btn-edit {
+            color: var(--yellow);
+        }
+
+        .btn-edit:hover {
+            background: rgba(227, 179, 65, 0.15);
+        }
+
+        .btn-delete {
+            color: var(--red);
+        }
+
+        .btn-delete:hover {
+            background: rgba(248, 81, 73, 0.15);
+        }
+
+        /* ── Footer ── */
+        .table-footer {
+            padding: 0.65rem 1rem;
+            background: var(--bg);
+            border-top: 1px solid var(--border-sub);
+            font-size: 0.72rem;
+            color: var(--text-fade);
+            text-align: right;
+        }
+
+        #resultCount {
+            color: var(--text-dim);
+        }
+
+        /* ── Form error banner ── */
+        .form-error-banner {
+            background: rgba(248, 81, 73, 0.1);
+            border: 1px solid rgba(248, 81, 73, 0.35);
+            border-radius: 8px;
+            color: var(--red);
+            font-size: 0.82rem;
+            font-weight: 500;
+            padding: 0.65rem 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        /* ── Delete Confirmation Modal ── */
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-backdrop.active {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 2rem;
+            max-width: 420px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            animation: modal-in .2s ease;
+        }
+
+        @keyframes modal-in {
+            from {
+                opacity: 0;
+                transform: scale(0.93) translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .modal-icon {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .modal-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--red);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-body {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .modal-body strong {
+            color: var(--text);
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .modal-btn {
+            padding: 0.55rem 1.4rem;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .2s, transform .15s;
+        }
+
+        .modal-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .modal-btn-cancel {
+            background: transparent;
+            color: var(--text-dim);
+            border-color: var(--border);
+        }
+
+        .modal-btn-cancel:hover {
+            background: var(--border-sub);
+            color: var(--text);
+        }
+
+        .modal-btn-delete {
+            background: rgba(248, 81, 73, 0.15);
+            color: var(--red);
+            border-color: rgba(248, 81, 73, 0.4);
+        }
+
+        .modal-btn-delete:hover {
+            background: rgba(248, 81, 73, 0.28);
+            box-shadow: 0 4px 14px rgba(248, 81, 73, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>MAC Address</th>
+                <th>Name</th>
+                <th>Protocols</th>
+                <th>VLANs</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aqui iniccia el ciclo for para recorrer la lista-->
+            {% for mac, device in products %}
+            <tr><!-- MAC -->
+                <td class="mac-cell">{{ mac }}</td>
+
+                <!-- Name -->
+                <td class="name-cell">{{ device.Name }}</td>
+
+                <!-- Protocols -->
+                <td>
+                    <div class="chip-list">
+                        {% for proto in device.Protocols %}
+                        <span class="chip chip-proto">{{ proto }}</span>
+                        {% endfor %}
+                    </div>
+                </td>
+
+                <!-- VLANs (full detail) -->
+                <td>
+                    <div class="vlan-list">
+                        {% for vname, vdata in device.Vlans.items() %}
+                        <div class="vlan-block">
+                            <div class="vlan-id">{{ vname }}</div>
+                            <div class="vlan-row">
+                                <span class="vlan-label">IP</span>
+                                <span class="vlan-ip">{{ vdata.IP }}</span>
+                            </div>
+                            <div class="vlan-row">
+                                <span class="vlan-label">Ports</span>
+                                <div class="chip-list">
+                                    {% for port in vdata.Ports %}
+                                    <span class="chip chip-port">{{ port }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="vlan-row">
+                                <span class="vlan-label">Policies</span>
+                                <div class="chip-list">
+                                    {% for pol in vdata.Policies %}
+                                    <span class="chip chip-policy">{{ pol }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="vlan-row">
+                                <span class="vlan-label">ET</span>
+                                <span class="{{ 'bool-yes' if vdata.ET else 'bool-no' }}">{{ '&#10003;' if vdata.ET else
+                                    '&#10007;' }}</span>
+                                &nbsp;
+                                <span class="vlan-label">SSH</span>
+                                <span class="{{ 'bool-yes' if vdata.SSH else 'bool-no' }}">{{ '&#10003;' if vdata.SSH
+                                    else '&#10007;' }}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </td>
+
+                <!-- Status -->
+                <td>
+                    <span class="status-badge {{ 'online' if device.Status == 'Online' else 'offline' }}">
+                        {{ device.Status }}
+                    </span>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

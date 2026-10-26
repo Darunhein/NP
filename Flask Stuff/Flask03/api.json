@@ -1,0 +1,3659 @@
+{
+    "AB::IOC::7D": {
+        "Protocols": [
+            "ospf",
+            "st",
+            "iegrp"
+        ],
+        "Name": "R1",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Fa0/0",
+                    "Fa0/1"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.0.0.1",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "A0::43B::AE": {
+        "Protocols": [
+            "ospf",
+            "vrrp",
+            "bgp",
+            "mpls"
+        ],
+        "Name": "R2",
+        "Vlans": {
+            "Vl20": {
+                "Ports": [
+                    "Fa3/3",
+                    "Fa3/4"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.2.1.3",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "2F::511::D9": {
+        "Protocols": [
+            "stp",
+            "bgp",
+            "iegrp",
+            "ospf"
+        ],
+        "Name": "R3",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Gi0/3"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.3.1.4",
+                "SSH": false
+            },
+            "Vl20": {
+                "Ports": [
+                    "Se1/5",
+                    "Se2/3",
+                    "Se2/1"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.1.1.4",
+                "SSH": false
+            },
+            "Vl100": {
+                "Ports": [
+                    "Se1/5",
+                    "Se0/3",
+                    "Se0/5"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.4.1.4",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "37::EA2::2B": {
+        "Protocols": [
+            "vrrp",
+            "iegrp",
+            "stp"
+        ],
+        "Name": "GW4",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Se0/1"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.4.1.5",
+                "SSH": true
+            },
+            "Vl100": {
+                "Ports": [
+                    "Se3/4",
+                    "Se0/1",
+                    "Se2/5",
+                    "Se0/4"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.5.1.5",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "FC::81A::D8": {
+        "Protocols": [
+            "st",
+            "eigrp"
+        ],
+        "Name": "SW5",
+        "Vlans": {
+            "Vl20": {
+                "Ports": [
+                    "Se0/5"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.4.1.6",
+                "SSH": true
+            },
+            "Vl1": {
+                "Ports": [
+                    "Fa0/2",
+                    "Fa1/7",
+                    "Fa1/4",
+                    "Fa3/3"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.5.1.6",
+                "SSH": false
+            },
+            "Vl3": {
+                "Ports": [
+                    "Se0/3",
+                    "Se1/1",
+                    "Se2/0",
+                    "Se1/3"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.1.1.6",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "ED::13A::32": {
+        "Protocols": [
+            "rip",
+            "mpls",
+            "iegrp",
+            "bgp"
+        ],
+        "Name": "GW6",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Se3/6",
+                    "Se3/0",
+                    "Se0/0"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.1.1.7",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "82::27D::1C": {
+        "Protocols": [
+            "ospf"
+        ],
+        "Name": "GW7",
+        "Vlans": {
+            "Vl20": {
+                "Ports": [
+                    "Gi3/7",
+                    "Gi3/3"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.0.1.8",
+                "SSH": false
+            },
+            "Vl1": {
+                "Ports": [
+                    "Te2/6",
+                    "Te3/2",
+                    "Te1/4",
+                    "Te1/0"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.0.1.8",
+                "SSH": false
+            },
+            "Vl100": {
+                "Ports": [
+                    "Gi0/2"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.5.1.8",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "6F::990::1A": {
+        "Protocols": [
+            "isis",
+            "rip",
+            "st"
+        ],
+        "Name": "GW8",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Se2/7",
+                    "Se2/1"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.0.1.9",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "82::513::47": {
+        "Protocols": [
+            "vrrp",
+            "stp",
+            "ospf"
+        ],
+        "Name": "GW9",
+        "Vlans": {
+            "Vl20": {
+                "Ports": [
+                    "Gi0/1",
+                    "Gi1/4",
+                    "Gi2/3"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.2.1.10",
+                "SSH": true
+            },
+            "Vl3": {
+                "Ports": [
+                    "Fa2/0",
+                    "Fa0/5",
+                    "Fa1/4",
+                    "Fa1/7"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.0.1.10",
+                "SSH": true
+            },
+            "Vl1": {
+                "Ports": [
+                    "Fa1/6",
+                    "Fa1/0",
+                    "Fa2/5"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.5.1.10",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "A5::8DF::BE": {
+        "Protocols": [
+            "eigrp",
+            "iegrp"
+        ],
+        "Name": "SW10",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Te1/4",
+                    "Te1/1",
+                    "Te3/0",
+                    "Te3/3"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.2.1.11",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "3A::641::C5": {
+        "Protocols": [
+            "stp",
+            "st",
+            "ospf",
+            "mpls"
+        ],
+        "Name": "GW11",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Te0/6"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.3.1.12",
+                "SSH": true
+            },
+            "Vl20": {
+                "Ports": [
+                    "Te3/0"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.0.1.12",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "9A::1E8::A5": {
+        "Protocols": [
+            "stp",
+            "eigrp",
+            "rip"
+        ],
+        "Name": "DC12",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Gi3/0",
+                    "Gi2/4",
+                    "Gi1/6"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.5.1.13",
+                "SSH": true
+            },
+            "Vl10": {
+                "Ports": [
+                    "Se0/4",
+                    "Se2/1"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.1.1.13",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "03::7D1::6A": {
+        "Protocols": [
+            "mpls",
+            "iegrp",
+            "rip",
+            "bgp"
+        ],
+        "Name": "SW13",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Se1/7",
+                    "Se0/3"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.3.1.14",
+                "SSH": false
+            },
+            "Vl1": {
+                "Ports": [
+                    "Se3/2",
+                    "Se3/7",
+                    "Se2/3",
+                    "Se2/7"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.0.1.14",
+                "SSH": false
+            },
+            "Vl20": {
+                "Ports": [
+                    "Gi2/5",
+                    "Gi0/2",
+                    "Gi1/3"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.3.1.14",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "57::0D6::CF": {
+        "Protocols": [
+            "mpls",
+            "ospf",
+            "st",
+            "eigrp"
+        ],
+        "Name": "R14",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Gi1/4",
+                    "Gi3/7",
+                    "Gi0/6",
+                    "Gi2/6"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.4.1.15",
+                "SSH": true
+            },
+            "Vl20": {
+                "Ports": [
+                    "Se0/6"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.0.1.15",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "63::5C6::CD": {
+        "Protocols": [
+            "mpls"
+        ],
+        "Name": "FW15",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Fa1/1",
+                    "Fa0/0",
+                    "Fa1/3"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.1.1.16",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "71::F74::59": {
+        "Protocols": [
+            "eigrp"
+        ],
+        "Name": "DC16",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Fa3/6",
+                    "Fa1/1",
+                    "Fa1/1"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.2.1.17",
+                "SSH": false
+            },
+            "Vl20": {
+                "Ports": [
+                    "Te2/0"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.2.1.17",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "B6::BF4::C8": {
+        "Protocols": [
+            "iegrp",
+            "isis",
+            "st",
+            "vrrp"
+        ],
+        "Name": "AP17",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Te1/7",
+                    "Te3/5",
+                    "Te0/7",
+                    "Te2/2"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.2.1.18",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "EB::40F::1B": {
+        "Protocols": [
+            "mpls",
+            "vrrp"
+        ],
+        "Name": "AP18",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Te3/3",
+                    "Te2/5"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.5.1.19",
+                "SSH": false
+            },
+            "Vl100": {
+                "Ports": [
+                    "Te2/4",
+                    "Te2/3",
+                    "Te0/3",
+                    "Te2/1"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.5.1.19",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "49::C9F::D4": {
+        "Protocols": [
+            "isis",
+            "ospf"
+        ],
+        "Name": "FW19",
+        "Vlans": {
+            "Vl20": {
+                "Ports": [
+                    "Fa2/2"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.3.1.20",
+                "SSH": false
+            },
+            "Vl2": {
+                "Ports": [
+                    "Se1/0",
+                    "Se2/7",
+                    "Se0/1"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.1.1.20",
+                "SSH": true
+            },
+            "Vl3": {
+                "Ports": [
+                    "Te1/1"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.3.1.20",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "49::690::F1": {
+        "Protocols": [
+            "isis",
+            "bgp"
+        ],
+        "Name": "SW20",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Gi1/0"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.0.1.21",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "44::D13::4C": {
+        "Protocols": [
+            "iegrp",
+            "bgp"
+        ],
+        "Name": "GW21",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Gi0/2"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.0.1.22",
+                "SSH": false
+            },
+            "Vl100": {
+                "Ports": [
+                    "Te2/7",
+                    "Te3/1",
+                    "Te0/6",
+                    "Te2/4"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.5.1.22",
+                "SSH": true
+            },
+            "Vl3": {
+                "Ports": [
+                    "Te1/7"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.5.1.22",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "F7::651::26": {
+        "Protocols": [
+            "iegrp",
+            "stp",
+            "ospf"
+        ],
+        "Name": "AP22",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Te0/6",
+                    "Te0/7",
+                    "Te3/0"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.4.1.23",
+                "SSH": false
+            },
+            "Vl3": {
+                "Ports": [
+                    "Se1/4"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.5.1.23",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "1F::932::88": {
+        "Protocols": [
+            "bgp",
+            "mpls"
+        ],
+        "Name": "R23",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Gi2/4",
+                    "Gi3/7",
+                    "Gi3/3",
+                    "Gi3/2"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.2.1.24",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "5C::40B::D9": {
+        "Protocols": [
+            "eigrp",
+            "mpls",
+            "stp",
+            "vrrp"
+        ],
+        "Name": "DC24",
+        "Vlans": {
+            "Vl20": {
+                "Ports": [
+                    "Se2/3",
+                    "Se1/6",
+                    "Se1/6",
+                    "Se0/5"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.3.1.25",
+                "SSH": true
+            },
+            "Vl100": {
+                "Ports": [
+                    "Gi0/7",
+                    "Gi0/7",
+                    "Gi0/2"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.2.1.25",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "96::15A::8F": {
+        "Protocols": [
+            "stp",
+            "ospf",
+            "bgp",
+            "mpls"
+        ],
+        "Name": "DC25",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Fa0/1",
+                    "Fa3/2",
+                    "Fa2/0",
+                    "Fa0/5"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.2.1.26",
+                "SSH": false
+            },
+            "Vl3": {
+                "Ports": [
+                    "Gi3/2",
+                    "Gi1/2"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.4.1.26",
+                "SSH": true
+            },
+            "Vl2": {
+                "Ports": [
+                    "Se1/7",
+                    "Se2/7"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.5.1.26",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "1F::F4F::B7": {
+        "Protocols": [
+            "iegrp",
+            "mpls"
+        ],
+        "Name": "FW26",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Se2/4",
+                    "Se0/6",
+                    "Se2/0"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.2.1.27",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "95::A9A::BA": {
+        "Protocols": [
+            "ospf"
+        ],
+        "Name": "SW27",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Te0/4",
+                    "Te2/6"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.4.1.28",
+                "SSH": false
+            },
+            "Vl1": {
+                "Ports": [
+                    "Te2/7",
+                    "Te2/5"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.1.1.28",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "DB::FFC::5C": {
+        "Protocols": [
+            "stp",
+            "bgp",
+            "mpls"
+        ],
+        "Name": "R28",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Se0/3",
+                    "Se3/0",
+                    "Se2/3"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.5.1.29",
+                "SSH": false
+            },
+            "Vl3": {
+                "Ports": [
+                    "Fa0/0",
+                    "Fa2/7"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.4.1.29",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "65::FB8::9B": {
+        "Protocols": [
+            "mpls"
+        ],
+        "Name": "AP29",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Te3/7",
+                    "Te1/5"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.0.1.30",
+                "SSH": false
+            },
+            "Vl3": {
+                "Ports": [
+                    "Te0/7",
+                    "Te0/3"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.1.1.30",
+                "SSH": true
+            },
+            "Vl1": {
+                "Ports": [
+                    "Gi1/3"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.4.1.30",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "4F::F8C::1D": {
+        "Protocols": [
+            "st"
+        ],
+        "Name": "SW30",
+        "Vlans": {
+            "Vl20": {
+                "Ports": [
+                    "Te1/4"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.4.1.31",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "B7::C81::8F": {
+        "Protocols": [
+            "mpls",
+            "ospf",
+            "stp"
+        ],
+        "Name": "R31",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Fa3/1",
+                    "Fa0/5",
+                    "Fa1/1",
+                    "Fa1/4"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.4.1.32",
+                "SSH": false
+            },
+            "Vl100": {
+                "Ports": [
+                    "Fa1/6"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.3.1.32",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "61::6A5::2E": {
+        "Protocols": [
+            "bgp"
+        ],
+        "Name": "R32",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Fa1/0",
+                    "Fa2/1",
+                    "Fa3/5"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.2.1.33",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "93::A31::D5": {
+        "Protocols": [
+            "iegrp",
+            "stp"
+        ],
+        "Name": "FW33",
+        "Vlans": {
+            "Vl20": {
+                "Ports": [
+                    "Te1/4"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.1.1.34",
+                "SSH": true
+            },
+            "Vl100": {
+                "Ports": [
+                    "Se1/0"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.3.1.34",
+                "SSH": false
+            },
+            "Vl1": {
+                "Ports": [
+                    "Se1/5",
+                    "Se2/5",
+                    "Se0/0"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.5.1.34",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "4A::774::C1": {
+        "Protocols": [
+            "isis"
+        ],
+        "Name": "AP34",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Te1/6"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.2.1.35",
+                "SSH": true
+            },
+            "Vl20": {
+                "Ports": [
+                    "Gi2/5",
+                    "Gi0/0",
+                    "Gi3/6"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.4.1.35",
+                "SSH": true
+            },
+            "Vl10": {
+                "Ports": [
+                    "Te3/0"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.2.1.35",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "9B::610::5C": {
+        "Protocols": [
+            "st",
+            "bgp",
+            "iegrp",
+            "mpls"
+        ],
+        "Name": "GW35",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Se0/6",
+                    "Se2/5",
+                    "Se1/5",
+                    "Se1/1"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.2.1.36",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "BD::D32::39": {
+        "Protocols": [
+            "eigrp"
+        ],
+        "Name": "DC36",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Te1/7",
+                    "Te0/7",
+                    "Te3/4"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.4.1.37",
+                "SSH": true
+            },
+            "Vl100": {
+                "Ports": [
+                    "Te3/0",
+                    "Te0/5",
+                    "Te2/1",
+                    "Te0/6"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.4.1.37",
+                "SSH": true
+            },
+            "Vl20": {
+                "Ports": [
+                    "Te1/0",
+                    "Te3/1",
+                    "Te2/1",
+                    "Te1/0"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.4.1.37",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "5E::6CA::0A": {
+        "Protocols": [
+            "st"
+        ],
+        "Name": "FW37",
+        "Vlans": {
+            "Vl20": {
+                "Ports": [
+                    "Se2/2",
+                    "Se2/1",
+                    "Se1/5"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.2.1.38",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "A5::2BF::FE": {
+        "Protocols": [
+            "stp",
+            "st",
+            "ospf",
+            "eigrp"
+        ],
+        "Name": "R38",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Te1/3",
+                    "Te1/2",
+                    "Te0/4",
+                    "Te0/0"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.1.1.39",
+                "SSH": true
+            },
+            "Vl100": {
+                "Ports": [
+                    "Gi3/0",
+                    "Gi3/5"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.5.1.39",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "33::FCE::3A": {
+        "Protocols": [
+            "mpls",
+            "isis",
+            "iegrp",
+            "stp"
+        ],
+        "Name": "GW39",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Gi0/7",
+                    "Gi2/1",
+                    "Gi0/4"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.3.1.40",
+                "SSH": true
+            },
+            "Vl2": {
+                "Ports": [
+                    "Se1/7"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.3.1.40",
+                "SSH": false
+            },
+            "Vl20": {
+                "Ports": [
+                    "Gi0/5",
+                    "Gi1/0",
+                    "Gi2/1",
+                    "Gi2/2"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.3.1.40",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "C7::9E0::32": {
+        "Protocols": [
+            "bgp",
+            "isis",
+            "rip",
+            "eigrp"
+        ],
+        "Name": "DC40",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Gi3/1",
+                    "Gi0/7",
+                    "Gi0/3",
+                    "Gi1/4"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.4.1.41",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "2A::85F::8C": {
+        "Protocols": [
+            "iegrp"
+        ],
+        "Name": "GW41",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Te0/5",
+                    "Te0/5",
+                    "Te1/1"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.4.1.42",
+                "SSH": false
+            },
+            "Vl10": {
+                "Ports": [
+                    "Gi3/2",
+                    "Gi1/1",
+                    "Gi3/0",
+                    "Gi2/3"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.2.1.42",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "8F::84C::35": {
+        "Protocols": [
+            "isis",
+            "bgp",
+            "st"
+        ],
+        "Name": "R42",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Se1/7",
+                    "Se3/5",
+                    "Se2/1"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.4.1.43",
+                "SSH": false
+            },
+            "Vl100": {
+                "Ports": [
+                    "Te0/5"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.1.1.43",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "50::D5F::4F": {
+        "Protocols": [
+            "iegrp"
+        ],
+        "Name": "R43",
+        "Vlans": {
+            "Vl20": {
+                "Ports": [
+                    "Fa3/0",
+                    "Fa1/1"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.3.1.44",
+                "SSH": true
+            },
+            "Vl2": {
+                "Ports": [
+                    "Gi2/5",
+                    "Gi3/1",
+                    "Gi1/5",
+                    "Gi3/5"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.5.1.44",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "76::844::7F": {
+        "Protocols": [
+            "rip",
+            "bgp",
+            "eigrp",
+            "iegrp"
+        ],
+        "Name": "FW44",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Gi0/5",
+                    "Gi2/1",
+                    "Gi2/4",
+                    "Gi1/2"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.1.1.45",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "37::597::F2": {
+        "Protocols": [
+            "isis"
+        ],
+        "Name": "R45",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Se0/2",
+                    "Se2/1",
+                    "Se3/7",
+                    "Se2/2"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.4.1.46",
+                "SSH": true
+            },
+            "Vl10": {
+                "Ports": [
+                    "Fa2/2",
+                    "Fa1/5"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.0.1.46",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "3F::4A9::1A": {
+        "Protocols": [
+            "eigrp",
+            "st"
+        ],
+        "Name": "GW46",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Fa1/6",
+                    "Fa0/7",
+                    "Fa2/4"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.3.1.47",
+                "SSH": true
+            },
+            "Vl100": {
+                "Ports": [
+                    "Fa3/6",
+                    "Fa3/7"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.2.1.47",
+                "SSH": false
+            },
+            "Vl20": {
+                "Ports": [
+                    "Te1/5",
+                    "Te0/5",
+                    "Te1/7",
+                    "Te0/4"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.0.1.47",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "FD::6FE::DE": {
+        "Protocols": [
+            "rip",
+            "eigrp",
+            "mpls"
+        ],
+        "Name": "DC47",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Se0/6"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.0.1.48",
+                "SSH": true
+            },
+            "Vl100": {
+                "Ports": [
+                    "Te3/4",
+                    "Te0/1",
+                    "Te3/2",
+                    "Te2/5"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.0.1.48",
+                "SSH": true
+            },
+            "Vl3": {
+                "Ports": [
+                    "Te0/6",
+                    "Te3/4",
+                    "Te0/2"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.2.1.48",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "C3::880::25": {
+        "Protocols": [
+            "eigrp",
+            "stp",
+            "vrrp",
+            "mpls"
+        ],
+        "Name": "AP48",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Te3/4",
+                    "Te3/0",
+                    "Te2/5"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.5.1.49",
+                "SSH": true
+            },
+            "Vl2": {
+                "Ports": [
+                    "Se1/0",
+                    "Se3/2",
+                    "Se3/2"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.1.1.49",
+                "SSH": true
+            },
+            "Vl10": {
+                "Ports": [
+                    "Se3/2",
+                    "Se3/3",
+                    "Se3/7"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.4.1.49",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "F7::6F7::88": {
+        "Protocols": [
+            "vrrp",
+            "mpls",
+            "rip"
+        ],
+        "Name": "DC49",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Te2/4",
+                    "Te1/7"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.2.1.50",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "98::E65::C2": {
+        "Protocols": [
+            "bgp",
+            "st",
+            "mpls"
+        ],
+        "Name": "R50",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Gi2/2",
+                    "Gi0/3",
+                    "Gi1/0"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.0.1.51",
+                "SSH": false
+            },
+            "Vl10": {
+                "Ports": [
+                    "Te0/2",
+                    "Te0/2",
+                    "Te3/7",
+                    "Te3/3"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.0.1.51",
+                "SSH": true
+            },
+            "Vl2": {
+                "Ports": [
+                    "Fa3/2",
+                    "Fa0/6"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.0.1.51",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "91::F4F::87": {
+        "Protocols": [
+            "isis",
+            "rip",
+            "bgp",
+            "eigrp"
+        ],
+        "Name": "SW51",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Se1/0",
+                    "Se2/4",
+                    "Se1/2"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.3.1.52",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "22::534::3C": {
+        "Protocols": [
+            "vrrp",
+            "ospf",
+            "isis"
+        ],
+        "Name": "FW52",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Fa2/2",
+                    "Fa3/4",
+                    "Fa0/4",
+                    "Fa2/3"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.1.1.53",
+                "SSH": false
+            },
+            "Vl2": {
+                "Ports": [
+                    "Te3/3",
+                    "Te1/1",
+                    "Te3/5",
+                    "Te0/1"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.4.1.53",
+                "SSH": true
+            },
+            "Vl1": {
+                "Ports": [
+                    "Gi3/1",
+                    "Gi1/7",
+                    "Gi0/7"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.4.1.53",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "70::7CB::6D": {
+        "Protocols": [
+            "vrrp",
+            "bgp"
+        ],
+        "Name": "DC53",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Te0/1"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.1.1.54",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "CF::A6F::6D": {
+        "Protocols": [
+            "bgp",
+            "stp",
+            "eigrp",
+            "st"
+        ],
+        "Name": "AP54",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Se1/0",
+                    "Se0/4"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.1.1.55",
+                "SSH": true
+            },
+            "Vl2": {
+                "Ports": [
+                    "Se1/4",
+                    "Se1/1",
+                    "Se0/6"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.0.1.55",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "97::AD3::07": {
+        "Protocols": [
+            "ospf",
+            "eigrp"
+        ],
+        "Name": "GW55",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Te2/2",
+                    "Te1/6"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.5.1.56",
+                "SSH": false
+            },
+            "Vl2": {
+                "Ports": [
+                    "Se2/6"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.2.1.56",
+                "SSH": false
+            },
+            "Vl100": {
+                "Ports": [
+                    "Gi1/3",
+                    "Gi2/2",
+                    "Gi3/0",
+                    "Gi3/6"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.2.1.56",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "51::758::D0": {
+        "Protocols": [
+            "bgp"
+        ],
+        "Name": "AP56",
+        "Vlans": {
+            "Vl20": {
+                "Ports": [
+                    "Gi1/5",
+                    "Gi2/0",
+                    "Gi1/3",
+                    "Gi0/7"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.3.1.57",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "8C::685::48": {
+        "Protocols": [
+            "bgp",
+            "mpls",
+            "st",
+            "vrrp"
+        ],
+        "Name": "AP57",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Fa1/0",
+                    "Fa2/6"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.1.1.58",
+                "SSH": false
+            },
+            "Vl10": {
+                "Ports": [
+                    "Gi2/4",
+                    "Gi3/7",
+                    "Gi3/2",
+                    "Gi2/2"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.1.1.58",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "8D::1D0::02": {
+        "Protocols": [
+            "bgp",
+            "eigrp"
+        ],
+        "Name": "DC58",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Se0/7",
+                    "Se3/0",
+                    "Se0/6"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.4.1.59",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "0D::ACE::11": {
+        "Protocols": [
+            "rip",
+            "stp"
+        ],
+        "Name": "SW59",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Se2/6"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.2.1.60",
+                "SSH": true
+            },
+            "Vl100": {
+                "Ports": [
+                    "Fa3/6"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.5.1.60",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "B1::DA5::FF": {
+        "Protocols": [
+            "rip"
+        ],
+        "Name": "GW60",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Se0/1",
+                    "Se2/0",
+                    "Se1/5"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.5.1.61",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "E4::99D::A8": {
+        "Protocols": [
+            "bgp",
+            "stp"
+        ],
+        "Name": "AP61",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Se0/5",
+                    "Se3/5"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.3.1.62",
+                "SSH": true
+            },
+            "Vl1": {
+                "Ports": [
+                    "Te3/2",
+                    "Te3/1",
+                    "Te2/3",
+                    "Te0/1"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.5.1.62",
+                "SSH": false
+            },
+            "Vl20": {
+                "Ports": [
+                    "Te0/1",
+                    "Te0/4",
+                    "Te3/5"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.1.1.62",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "78::605::19": {
+        "Protocols": [
+            "ospf",
+            "isis",
+            "iegrp",
+            "rip"
+        ],
+        "Name": "FW62",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Gi3/2",
+                    "Gi1/4"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.0.1.63",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "66::714::3A": {
+        "Protocols": [
+            "mpls",
+            "bgp"
+        ],
+        "Name": "GW63",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Fa2/6",
+                    "Fa2/7",
+                    "Fa2/6",
+                    "Fa1/4"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.2.1.64",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "FF::4B7::93": {
+        "Protocols": [
+            "iegrp",
+            "st",
+            "bgp"
+        ],
+        "Name": "AP64",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Fa1/7",
+                    "Fa2/1",
+                    "Fa3/7",
+                    "Fa1/4"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.5.1.65",
+                "SSH": false
+            },
+            "Vl20": {
+                "Ports": [
+                    "Se3/7"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.2.1.65",
+                "SSH": true
+            },
+            "Vl100": {
+                "Ports": [
+                    "Fa2/2",
+                    "Fa0/6"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.0.1.65",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "3B::8B3::57": {
+        "Protocols": [
+            "st",
+            "ospf"
+        ],
+        "Name": "DC65",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Se0/2"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.1.1.66",
+                "SSH": false
+            },
+            "Vl3": {
+                "Ports": [
+                    "Te0/7",
+                    "Te3/5",
+                    "Te0/4",
+                    "Te0/1"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.5.1.66",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "EB::885::67": {
+        "Protocols": [
+            "eigrp",
+            "iegrp"
+        ],
+        "Name": "AP66",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Gi3/6",
+                    "Gi0/3",
+                    "Gi1/4",
+                    "Gi0/1"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.1.1.67",
+                "SSH": false
+            },
+            "Vl20": {
+                "Ports": [
+                    "Fa3/5",
+                    "Fa3/6",
+                    "Fa0/5"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.4.1.67",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "A5::315::26": {
+        "Protocols": [
+            "vrrp",
+            "iegrp"
+        ],
+        "Name": "GW67",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Gi3/4",
+                    "Gi1/2"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.0.1.68",
+                "SSH": false
+            },
+            "Vl10": {
+                "Ports": [
+                    "Gi3/7",
+                    "Gi3/7"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.0.1.68",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "C3::034::C9": {
+        "Protocols": [
+            "vrrp"
+        ],
+        "Name": "AP68",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Te3/3"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.0.1.69",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "4D::1D1::C3": {
+        "Protocols": [
+            "vrrp",
+            "iegrp",
+            "eigrp"
+        ],
+        "Name": "DC69",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Fa2/2",
+                    "Fa2/4",
+                    "Fa2/4"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.0.1.70",
+                "SSH": false
+            },
+            "Vl100": {
+                "Ports": [
+                    "Gi1/2",
+                    "Gi2/3"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.5.1.70",
+                "SSH": false
+            },
+            "Vl20": {
+                "Ports": [
+                    "Se0/1",
+                    "Se3/4",
+                    "Se2/7",
+                    "Se3/5"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.5.1.70",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "DC::6FD::75": {
+        "Protocols": [
+            "stp",
+            "eigrp",
+            "mpls"
+        ],
+        "Name": "FW70",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Fa3/0"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.3.1.71",
+                "SSH": true
+            },
+            "Vl1": {
+                "Ports": [
+                    "Se1/4",
+                    "Se1/4"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.0.1.71",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "AA::0AB::C6": {
+        "Protocols": [
+            "ospf"
+        ],
+        "Name": "R71",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Fa1/7",
+                    "Fa0/0"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.3.1.72",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "31::C15::46": {
+        "Protocols": [
+            "bgp",
+            "stp"
+        ],
+        "Name": "SW72",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Se1/2",
+                    "Se3/7",
+                    "Se1/1"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.4.1.73",
+                "SSH": false
+            },
+            "Vl20": {
+                "Ports": [
+                    "Te2/2",
+                    "Te1/4",
+                    "Te0/3",
+                    "Te2/0"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.2.1.73",
+                "SSH": true
+            },
+            "Vl2": {
+                "Ports": [
+                    "Gi3/1",
+                    "Gi1/7",
+                    "Gi0/0",
+                    "Gi2/5"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.2.1.73",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "CF::C01::40": {
+        "Protocols": [
+            "stp",
+            "isis",
+            "iegrp",
+            "rip"
+        ],
+        "Name": "R73",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Te2/1"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.3.1.74",
+                "SSH": true
+            },
+            "Vl1": {
+                "Ports": [
+                    "Te1/0",
+                    "Te1/1",
+                    "Te3/1",
+                    "Te3/0"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.5.1.74",
+                "SSH": true
+            },
+            "Vl2": {
+                "Ports": [
+                    "Fa3/5",
+                    "Fa2/2"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.0.1.74",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "C4::1B9::17": {
+        "Protocols": [
+            "mpls"
+        ],
+        "Name": "FW74",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Te0/3"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.1.1.75",
+                "SSH": true
+            },
+            "Vl3": {
+                "Ports": [
+                    "Se3/2",
+                    "Se1/0",
+                    "Se3/3"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.2.1.75",
+                "SSH": true
+            },
+            "Vl100": {
+                "Ports": [
+                    "Te0/2"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.3.1.75",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "ED::C41::75": {
+        "Protocols": [
+            "vrrp",
+            "rip",
+            "mpls"
+        ],
+        "Name": "FW75",
+        "Vlans": {
+            "Vl20": {
+                "Ports": [
+                    "Gi1/0",
+                    "Gi3/0"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.5.1.76",
+                "SSH": true
+            },
+            "Vl10": {
+                "Ports": [
+                    "Te3/4"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.3.1.76",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "FF::240::3D": {
+        "Protocols": [
+            "mpls",
+            "bgp",
+            "stp"
+        ],
+        "Name": "AP76",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Fa1/3",
+                    "Fa2/4",
+                    "Fa2/6",
+                    "Fa2/5"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.1.1.77",
+                "SSH": true
+            },
+            "Vl10": {
+                "Ports": [
+                    "Fa0/2",
+                    "Fa3/7"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.1.1.77",
+                "SSH": false
+            },
+            "Vl1": {
+                "Ports": [
+                    "Te2/1",
+                    "Te0/2",
+                    "Te2/0",
+                    "Te1/5"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.2.1.77",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "8A::4F0::67": {
+        "Protocols": [
+            "bgp",
+            "mpls"
+        ],
+        "Name": "DC77",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Fa0/3"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.2.1.78",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "94::D01::E7": {
+        "Protocols": [
+            "st"
+        ],
+        "Name": "SW78",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Se1/6"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.5.1.79",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "23::24E::09": {
+        "Protocols": [
+            "mpls",
+            "iegrp",
+            "vrrp"
+        ],
+        "Name": "SW79",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Te1/6",
+                    "Te1/3",
+                    "Te0/6",
+                    "Te2/7"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.2.1.80",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "09::0C4::C7": {
+        "Protocols": [
+            "eigrp",
+            "bgp"
+        ],
+        "Name": "FW80",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Gi0/3",
+                    "Gi3/5",
+                    "Gi1/2"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.5.1.81",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "E0::BF9::93": {
+        "Protocols": [
+            "eigrp",
+            "mpls",
+            "ospf"
+        ],
+        "Name": "AP81",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Gi0/7",
+                    "Gi0/5"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.5.1.82",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "ED::509::EC": {
+        "Protocols": [
+            "bgp",
+            "st",
+            "iegrp"
+        ],
+        "Name": "GW82",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Te1/6",
+                    "Te3/5"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.1.1.83",
+                "SSH": true
+            },
+            "Vl3": {
+                "Ports": [
+                    "Se2/2",
+                    "Se1/0",
+                    "Se3/0"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.4.1.83",
+                "SSH": true
+            },
+            "Vl20": {
+                "Ports": [
+                    "Fa1/5",
+                    "Fa0/3",
+                    "Fa2/5",
+                    "Fa1/1"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.1.1.83",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "B5::CB0::76": {
+        "Protocols": [
+            "mpls",
+            "iegrp",
+            "st",
+            "isis"
+        ],
+        "Name": "SW83",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Gi3/1",
+                    "Gi0/4"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.0.1.84",
+                "SSH": true
+            },
+            "Vl10": {
+                "Ports": [
+                    "Te3/2",
+                    "Te0/1"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.3.1.84",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "96::05F::68": {
+        "Protocols": [
+            "isis",
+            "vrrp",
+            "rip"
+        ],
+        "Name": "DC84",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Se1/0",
+                    "Se2/0",
+                    "Se3/1",
+                    "Se2/7"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.1.1.85",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "AF::71C::7E": {
+        "Protocols": [
+            "stp"
+        ],
+        "Name": "FW85",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Se1/7",
+                    "Se0/4",
+                    "Se3/7"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.1.1.86",
+                "SSH": true
+            },
+            "Vl3": {
+                "Ports": [
+                    "Fa3/3",
+                    "Fa0/6",
+                    "Fa3/7"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.0.1.86",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "EB::8EC::A9": {
+        "Protocols": [
+            "eigrp",
+            "vrrp",
+            "rip",
+            "iegrp"
+        ],
+        "Name": "R86",
+        "Vlans": {
+            "Vl2": {
+                "Ports": [
+                    "Fa0/6",
+                    "Fa1/2",
+                    "Fa2/5",
+                    "Fa0/1"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.2.1.87",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "E0::B9C::12": {
+        "Protocols": [
+            "bgp"
+        ],
+        "Name": "GW87",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Se3/7",
+                    "Se3/0",
+                    "Se1/4"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.3.1.88",
+                "SSH": false
+            },
+            "Vl3": {
+                "Ports": [
+                    "Gi3/4"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.2.1.88",
+                "SSH": false
+            },
+            "Vl20": {
+                "Ports": [
+                    "Se1/2"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.5.1.88",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "91::7E6::78": {
+        "Protocols": [
+            "stp"
+        ],
+        "Name": "FW88",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Te1/0",
+                    "Te1/3",
+                    "Te1/0",
+                    "Te1/0"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.2.1.89",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "D8::A10::59": {
+        "Protocols": [
+            "vrrp",
+            "stp",
+            "st",
+            "eigrp"
+        ],
+        "Name": "SW89",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Fa0/6",
+                    "Fa0/2",
+                    "Fa1/3"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.5.1.90",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "8D::FA7::22": {
+        "Protocols": [
+            "isis",
+            "vrrp"
+        ],
+        "Name": "R90",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Se3/4",
+                    "Se1/7",
+                    "Se2/6"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.4.1.91",
+                "SSH": false
+            },
+            "Vl3": {
+                "Ports": [
+                    "Te3/1"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.2.1.91",
+                "SSH": false
+            },
+            "Vl10": {
+                "Ports": [
+                    "Gi1/0",
+                    "Gi3/5"
+                ],
+                "Policies": [
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.2.1.91",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "E6::B9F::D5": {
+        "Protocols": [
+            "stp",
+            "mpls"
+        ],
+        "Name": "DC91",
+        "Vlans": {
+            "Vl3": {
+                "Ports": [
+                    "Gi2/1",
+                    "Gi3/2"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "BLOCK_IP"
+                ],
+                "ET": false,
+                "IP": "10.5.1.92",
+                "SSH": true
+            },
+            "Vl20": {
+                "Ports": [
+                    "Gi1/4",
+                    "Gi3/5",
+                    "Gi2/4"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.0.1.92",
+                "SSH": true
+            },
+            "Vl100": {
+                "Ports": [
+                    "Se0/6",
+                    "Se2/6"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.1.1.92",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "69::E75::BC": {
+        "Protocols": [
+            "eigrp",
+            "st",
+            "ospf"
+        ],
+        "Name": "AP92",
+        "Vlans": {
+            "Vl10": {
+                "Ports": [
+                    "Te1/2",
+                    "Te3/1"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.5.1.93",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "6F::603::50": {
+        "Protocols": [
+            "ospf",
+            "vrrp"
+        ],
+        "Name": "FW93",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Te1/1",
+                    "Te3/4",
+                    "Te1/1"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.3.1.94",
+                "SSH": false
+            },
+            "Vl2": {
+                "Ports": [
+                    "Se2/7",
+                    "Se2/3"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": true,
+                "IP": "10.1.1.94",
+                "SSH": true
+            },
+            "Vl20": {
+                "Ports": [
+                    "Gi0/2",
+                    "Gi0/5"
+                ],
+                "Policies": [
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.4.1.94",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "90::1D0::17": {
+        "Protocols": [
+            "mpls",
+            "eigrp",
+            "rip"
+        ],
+        "Name": "R94",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Se2/2"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.0.1.95",
+                "SSH": true
+            },
+            "Vl1": {
+                "Ports": [
+                    "Se1/4",
+                    "Se1/5"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.4.1.95",
+                "SSH": false
+            },
+            "Vl3": {
+                "Ports": [
+                    "Gi2/3",
+                    "Gi0/0",
+                    "Gi0/1",
+                    "Gi3/2"
+                ],
+                "Policies": [
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.5.1.95",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    },
+    "EA::7F4::0D": {
+        "Protocols": [
+            "st",
+            "vrrp",
+            "iegrp"
+        ],
+        "Name": "R95",
+        "Vlans": {
+            "Vl1": {
+                "Ports": [
+                    "Fa1/5",
+                    "Fa2/7"
+                ],
+                "Policies": [
+                    "ALLOW_ALL",
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.1.1.96",
+                "SSH": true
+            },
+            "Vl100": {
+                "Ports": [
+                    "Se3/4",
+                    "Se3/7",
+                    "Se3/2",
+                    "Se0/2"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.3.1.96",
+                "SSH": false
+            },
+            "Vl20": {
+                "Ports": [
+                    "Se3/5",
+                    "Se0/2"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.3.1.96",
+                "SSH": true
+            }
+        },
+        "Status": "Offline"
+    },
+    "1A::0D8::BB": {
+        "Protocols": [
+            "stp",
+            "vrrp",
+            "bgp"
+        ],
+        "Name": "SW96",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Se3/2",
+                    "Se0/0",
+                    "Se1/7"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "ALLOW_ALL"
+                ],
+                "ET": false,
+                "IP": "10.2.1.97",
+                "SSH": true
+            },
+            "Vl2": {
+                "Ports": [
+                    "Te0/3",
+                    "Te3/6",
+                    "Te1/1"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.3.1.97",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "5F::B06::08": {
+        "Protocols": [
+            "stp",
+            "vrrp",
+            "rip"
+        ],
+        "Name": "R97",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Te1/7"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "DROP_ALL"
+                ],
+                "ET": false,
+                "IP": "10.5.1.98",
+                "SSH": false
+            },
+            "Vl10": {
+                "Ports": [
+                    "Fa1/0"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "RATE_LIMIT"
+                ],
+                "ET": false,
+                "IP": "10.5.1.98",
+                "SSH": true
+            },
+            "Vl3": {
+                "Ports": [
+                    "Fa3/2",
+                    "Fa3/1"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.0.1.98",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "3D::35C::0A": {
+        "Protocols": [
+            "mpls"
+        ],
+        "Name": "DC98",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Gi0/0",
+                    "Gi3/7",
+                    "Gi1/2",
+                    "Gi1/1"
+                ],
+                "Policies": [
+                    "RATE_LIMIT",
+                    "REQUIRED_IP"
+                ],
+                "ET": false,
+                "IP": "10.3.1.99",
+                "SSH": true
+            },
+            "Vl20": {
+                "Ports": [
+                    "Te2/4",
+                    "Te3/2",
+                    "Te1/6",
+                    "Te2/5"
+                ],
+                "Policies": [
+                    "BLOCK_IP"
+                ],
+                "ET": true,
+                "IP": "10.4.1.99",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "AE::2BF::28": {
+        "Protocols": [
+            "bgp",
+            "st",
+            "mpls"
+        ],
+        "Name": "DC99",
+        "Vlans": {
+            "Vl20": {
+                "Ports": [
+                    "Se0/0"
+                ],
+                "Policies": [
+                    "BLOCK_IP",
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.1.1.100",
+                "SSH": false
+            },
+            "Vl10": {
+                "Ports": [
+                    "Gi2/2",
+                    "Gi0/4",
+                    "Gi1/0"
+                ],
+                "Policies": [
+                    "DROP_ALL",
+                    "ALLOW_ALL"
+                ],
+                "ET": true,
+                "IP": "10.5.1.100",
+                "SSH": false
+            },
+            "Vl3": {
+                "Ports": [
+                    "Gi0/6",
+                    "Gi3/6",
+                    "Gi2/0"
+                ],
+                "Policies": [
+                    "REQUIRED_IP"
+                ],
+                "ET": true,
+                "IP": "10.4.1.100",
+                "SSH": false
+            }
+        },
+        "Status": "Offline"
+    },
+    "DE::BAC::89": {
+        "Protocols": [
+            "isis",
+            "mpls"
+        ],
+        "Name": "DC100",
+        "Vlans": {
+            "Vl100": {
+                "Ports": [
+                    "Fa1/1",
+                    "Fa3/0"
+                ],
+                "Policies": [
+                    "REQUIRED_IP",
+                    "RATE_LIMIT"
+                ],
+                "ET": true,
+                "IP": "10.1.1.101",
+                "SSH": false
+            }
+        },
+        "Status": "Online"
+    },
+    "MA::Y3::Z1": {
+        "Protocols": [
+            "bpp",
+            "hola"
+        ],
+        "Name": "NO SIRVE xD",
+        "Vlans": {
+            "Test": {
+                "Ports": [],
+                "Policies": [],
+                "ET": true,
+                "IP": "192.168.10.0",
+                "SSH": true
+            }
+        },
+        "Status": "Online"
+    }
+}
