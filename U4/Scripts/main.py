@@ -1,26 +1,24 @@
-#Global Variables
-a = "Text"
-b = 1
-c = [1, 2, 3, 4]
-d = {1: "One"}
-e = True
+logs = {"Key": "value"}
 
-def CreateLogEvent(n):
+def CreateLogEvent(logs):
     """
     Author: Darius Pasoch
     Date: 26/10/26
-    params: n not defined | all types accepted
+    params: logs | Dict
 
     descript: This function creates a log event for the application
     """
 
-    print("==== LOGS ====")
-    print("==== DUMMY DATA ====")
+    # print("==== LOGS ====")
+    # print("==== DUMMY DATA ====")
 
-    print(type(n))
+    # print(type(n))
 
-    return f" \n ==== LOGs ==== \n ==== DUMMY DATA ==== \n Type of n: {type(n)} \n "
+    # return f" \n ==== LOGs ==== \n ==== DUMMY DATA ==== \n Type of n: {type(n)} \n "
+
+    logs["New Key"] = "New Value"
+    return logs
 
 def a():
-    print('a')
+    # print('a')
     return ' \n a'
