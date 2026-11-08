@@ -368,10 +368,10 @@ def leer_logs_bloqueados(nombre_archivo=ARCHIVO_LOG):
 # Punto de entrada del programa
 # ==========================================
 if __name__ == "__main__":
-    print("Ejecutando funciones de red de forma independiente...\n")
-    mostrar_info_red()
+    # print("Ejecutando funciones de red de forma independiente...\n")
+    # mostrar_info_red()
     print("\nGenerando algunos eventos de prueba...")
-    simular_trafico(5)
+    simular_trafico(10)
     print("\nConsultando eventos bloqueados...")
     leer_logs_bloqueados()
 

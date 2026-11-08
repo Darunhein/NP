@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs Bloqueados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .info-box {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: #555;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        th {
+            background-color: #2c3e50;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+        .badge-bloqueado {
+            background-color: #e74c3c;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+        .empty-message {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #ffeeba;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registro de Incidentes - Conexiones Bloqueadas</h1>
+    
+    {% if incidentes %}
+        <div class="info-box">
+            Total de eventos bloqueados: <strong>{{ incidentes|length }}</strong>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha y Hora</th>
+                    <th>IP Origen</th>
+                    <th>IP Destino</th>
+                    <th>Puerto</th>
+                    <th>Protocolo</th>
+                    <th>Bytes</th>
+                    <th>Estado</th>
+                    <th>Latencia (ms)</th>
+                    <th>Usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for evento in incidentes %}
+                <tr>
+                    <td>{{ evento.timestamp }}</td>
+                    <td>{{ evento.ip_origen }}</td>
+                    <td>{{ evento.ip_destino }}</td>
+                    <td>{{ evento.puerto_destino }}</td>
+                    <td>{{ evento.protocolo }}</td>
+                    <td>{{ evento.bytes_enviados }}</td>
+                    <td><span class="badge-bloqueado">{{ evento.estado }}</span></td>
+                    <td>{{ evento.latencia_ms }}</td>
+                    <td>{{ evento.usuario }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="empty-message">
+            <p>No se encontraron eventos bloqueados en los registros.</p>
+        </div>
+    {% endif %}
+</body>
+</html>
