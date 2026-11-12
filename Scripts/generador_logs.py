@@ -199,6 +199,9 @@ def obtener_info_red():
     Salida:
     dict: Diccionario con hostname, IP local, gateway y MAC.
     """
+    #OutPut
+    print("Obteniendo informacion de la red...")
+
     return {
         "hostname": socket.gethostname(),
         "ip_local": obtener_ip_local(),
@@ -367,13 +370,14 @@ def leer_logs_bloqueados(nombre_archivo=ARCHIVO_LOG):
 # ==========================================
 # Punto de entrada del programa
 # ==========================================
-if __name__ == "__main__":
-    # print("Ejecutando funciones de red de forma independiente...\n")
-    # mostrar_info_red()
-    print("\nGenerando algunos eventos de prueba...")
-    simular_trafico(10)
-    print("\nConsultando eventos bloqueados...")
-    leer_logs_bloqueados()
+
+# if __name__ == "__main__":
+#     # print("Ejecutando funciones de red de forma independiente...\n")
+#     # mostrar_info_red()
+#     print("\nGenerando algunos eventos de prueba...")
+#     simular_trafico(10)
+#     print("\nConsultando eventos bloqueados...")
+#     leer_logs_bloqueados()
 
 """
 EJERCICIOS SUGERIDOS
